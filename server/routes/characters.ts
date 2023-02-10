@@ -34,7 +34,6 @@ export const charactersRouter = trpc.router({
               .optional()
       )
       .query(async ({ input }) => {
-        console.log('@@@@here');
         const charactersResponse = await axios<Result<Character>>(
             `https://rickandmortyapi.com/api/character/${input?.params?.multiple ?? ''}`,
             {

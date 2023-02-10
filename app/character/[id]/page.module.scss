@@ -1,17 +1,11 @@
 @import '/styles/variables.scss';
 
 .container {
-  width: 500px;
+  margin-top: 55px;
   display: flex;
-  overflow: hidden;
-  background: $grey-secondary-bg;
-  border-radius: 10px;
-  box-shadow: rgb(0 0 0 / 10%) 0 4px 6px -1px, rgb(0 0 0 / 6%) 0px 2px 4px -1px;
-
-  @include mobile() {
-    width: 100%;
-    flex-direction: column;
-  }
+  justify-content: center;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .image_container {
@@ -20,6 +14,7 @@
   position: relative;
 
   img {
+    border-radius: 20px;
     width: 100%;
     object-position: center center;
     object-fit: cover;
@@ -31,15 +26,14 @@
   }
 }
 
-.info {
-  padding: 10px 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
 .data {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
+}
+
+.info {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
 }
